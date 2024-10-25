@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css.css">
+  <title>MERSA_INTER DE CÔTE D'IVOIRE</title>
+<style>
+   * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  transition: 0.3s;
+  color:blue;
+  padding-left: 45px;
+}
+#topbar {
+  height: 30px;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  margin-top: 50px;
+}
+button{
+  width: 69px;
+  border-radius: 5px;
+  border-color: white;
+  color: white;
+  background: black;
+}
+#directbar{
+    text-align: center;
+    height: 350px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    margin-top: 480px;
+    color: white;
+    padding-top: 5px;
+}
+span{
+  color: red;
+}
+button:hover{
+  background: red;
+}
+#general{
+  height: 540;
+  width: 100%;
+  background-color: white;
+  margin-top: 80px;
+  padding-left: 0px;
+  position: fixed;
+  
+}
+#btn1{
+  background: skyblue;
+  
+}
+#tem-p{
+  margin-left: 30px;
+}
+.btnchange{
+  width: 35px;
+  height: 25px;
+  font-size: 20px;
+  background: blue;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+</style>
+</head>
+
+<body>
+<div id="logo">
+  <h4 id="title">LES ÉMISSIONS D'AUJOURD'HUI</h4><br>
+</div>
+<div id="topbar">
+  <table>
+    <tr>
+      <td><button id="emi">Émissions</button></td>
+      <td><button id="tem">Témoignages</button></td>
+      <td><button id="arc">Archives</button></td>
+      <td id="apr"><button>Àpropos</button></td>
+      <td><button id="reg">Réglage</button></td>
+    </tr>
+  </table>
+</div>
+<div id="general">
+  <iframe width="360" height="400" src="https://www.youtube.com/embed/RPguxnV4oRA?si=iZPrNjVosaekHe_e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   
+</div>
+<div id="directbar">
+  <div id="numbers">
+    chaîne principal
+  </div>
+   <button class="btnchange" onclick="chanel1()">1</button>
+   <button class="btnchange" onclick="chanel2()">2</button>
+   <button class="btnchange" onclick="chanel3()">3</button><br>
+   <button class="btnchange" onclick="chanel4()">4</button>
+   <button class="btnchange" onclick="chanel5()">5</button>
+   <button class="btnchange" onclick="chanel6()">6</button><br>
+   <button class="btnchange" onclick="chanel7()">7</button>
+   <button class="btnchange" onclick="chanel8()">8</button>
+   <button class="btnchange" onclick="chanel9()">9</button><br>
+   <button class="btnchange" onclick="chanel0()">0</button><br>
+   <a href="http://0.0.0.0:8080/">Rafraîchir la page</a>
+   <h3>Télécommande</h3>
+  
+</div>
+<script>
+  var emi = document.getElementById("emi");
+  var tem = document.getElementById("tem");
+  var arc = document.getElementById("arc");
+  var apr = document.getElementById("apr");
+  var reg = document.getElementById("reg");
+  
+  emi.onclick = function(){
+    document.getElementById("title").innerHTML = "<h4>LES ÉMISSIONS D'AUJOURD'HUI</h4>";
+    window.location = "http://0.0.0.0:8080/"
+  }
+  tem.onclick = function() {
+    document.getElementById("title").innerHTML = "<h4>LES  TÉMOIGNAGES</h4>";
+    document.getElementById("general").innerHTML = "<a href='https://files.fm/f/u52e39j2wj'>Témoignage/mer/10/2025/veuillez patienter dès que vous appuyez</a>"
+  }
+  arc.onclick = function() {
+    document.getElementById("title").innerHTML = "<h4>LES ARCHIVES </h4>";
+  document.getElementById("general").innerHTML = "<p id='tem-p'>Aucun archive disponible pour le moment !</p><br><h1>Jesus vous salut</h1>"
+  }
+  apr.onclick = function() {
+    document.getElementById("title").innerHTML = "<h4>À PROPOS DE CETTE APPLICATION </h4>";
+    document.getElementById("general").innerHTML = "<br><center><h1>À propos de cette application </h1><br><h2>IMPACT-REFORMATION</h2><p> La Mission Evangelique de Reformation et du Salut des Âmes International<span color='red'> MERSA-INTER</span> presente tout ces programmes d'activités en collaboration avec<span color='red' >Mankannite Production</span>. Recevez au quotidien des messages inspiré,des cantiques, clips et plusieurs autre événements </p></center>"
+  }
+  reg.onclick = function() {
+    document.getElementById("title").innerHTML = "<h4>RÉGLAGE</h4>";
+    document.getElementById("general").innerHTML = "<br><h2 id='btn1'>LES PROGRAMMES DU JOUR</h2><table><tr><th>Mardi: La parole de Dieu</th></tr><tr><td>Mercredi: Prière</td></tr><tr><td>Vendredi: Veillé de prière</td></tr><tr><td>Samedi: Nouvelle</td></tr><tr><td>Dimanche : culte</td></tr></table><br><h2 id='testimony'><a href='#'>Rendre témoignage WhatsApp +2250566653861</a></h2><br><h2 id='dime'><a href='#'>Payer vos offrandes, ou dimes de dimanche +2250506588720</a></h2><br><h2 id'don><a href='#'>Faire un don spécial à MERSA_INTER +2250506588720</a></h2>"
+  }
+</script>
+<script src="main.js">
+  
+  
+</script>
+</body>
+
+</html>
